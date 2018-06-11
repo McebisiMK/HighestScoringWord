@@ -31,7 +31,7 @@ describe("HighestScoringWord", function () {
                         let highestScoringWord = new HighestScoringWord();
                         let sentence = element.words;
                         //----------------Act----------------
-                        let actual = highestScoringWord.getHighestScoringWord(sentence);
+                        let actual = highestScoringWord.getHighestScoringWord(element.words);
 
                         //----------------Assert-------------
                         let expected = element.output;
@@ -43,16 +43,16 @@ describe("HighestScoringWord", function () {
         })
 
         describe("Given a string of many words'", function () {
-            [{ words: "the big bad wolf ate the fat chicken", output: "wolf" },
-            { words: "monday tuesday wednesday thursday friday", output: "thursday" },
-            { words: "polo bears live on ice", output: "polo" }]
+            [{ sentence: "the big bad wolf ate the fat chicken", output: "wolf" },
+            { sentence: "monday tuesday wednesday thursday friday", output: "thursday" },
+            { sentence: "polo bears live on ice", output: "polo" }]
                 .forEach(function (element) {
                     it("should return highest scoring word ", function () {
                         //----------------Arrange------------
                         let highestScoringWord = new HighestScoringWord();
                         let sentence = element.words;
                         //----------------Act----------------
-                        let actual = highestScoringWord.getHighestScoringWord(sentence);
+                        let actual = highestScoringWord.getHighestScoringWord(element.sentence);
 
                         //----------------Assert-------------
                         let expected = element.output;
