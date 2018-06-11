@@ -5,12 +5,12 @@ describe("HighestScoringWord", function () {
             { word: "now", output: "now" },
             { word: "you", output: "you" }]
                 .forEach(function (element) {
-                    xit("should return that word as highest scoring word ", function () {
+                    it("should return that word as highest scoring word ", function () {
                         //----------------Arrange------------
                         let highestScoringWord = new HighestScoringWord();
                         let word = element.word;
                         //----------------Act----------------
-                        let actual = highestScoringWord.getHighestScoringWord(word);
+                        let actual = highestScoringWord.getHighestScoringWord(element.word);
 
                         //----------------Assert-------------
                         let expected = element.output;
@@ -26,7 +26,7 @@ describe("HighestScoringWord", function () {
             { words: "beat  now", output: "now" },
             { words: "planet earth", output: "planet" }]
                 .forEach(function (element) {
-                    xit("should return highest scoring word ", function () {
+                    it("should return highest scoring word ", function () {
                         //----------------Arrange------------
                         let highestScoringWord = new HighestScoringWord();
                         let sentence = element.words;
@@ -43,11 +43,11 @@ describe("HighestScoringWord", function () {
         })
 
         describe("Given a string of many words'", function () {
-            [//{ words: "the big bad wolf ate the fat chicken", output: "wolf" },
-            // { words: "monday tuesday wednesday thursday friday", output: "thursday" },
+            [{ words: "the big bad wolf ate the fat chicken", output: "wolf" },
+            { words: "monday tuesday wednesday thursday friday", output: "thursday" },
             { words: "polo bears live on ice", output: "polo" }]
                 .forEach(function (element) {
-                    it("should return highest score word ", function () {
+                    it("should return highest scoring word ", function () {
                         //----------------Arrange------------
                         let highestScoringWord = new HighestScoringWord();
                         let sentence = element.words;
